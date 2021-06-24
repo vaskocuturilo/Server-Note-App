@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/vaskocuturilo/Server-Note-App/issues"
   },
-  "homepage": "https://github.com/vaskocuturilo/Server-Note-App#readme"
+  "homepage": "https://github.com/vaskocuturilo/Server-Note-App#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.14",
+    "mongose": "^0.0.2-security"
+  }
 }
