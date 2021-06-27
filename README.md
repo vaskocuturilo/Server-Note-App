@@ -25,6 +25,11 @@ You will need the following technologies available to try it out:
 * IDE of your choice
 * Web browser Chrome
 
+| GET    | POST    |
+| -------| --------|
+| /      | create  | 
+| /fetch | remove  |
+
 ### Diagram how to work.
 
 ![](https://c.radikal.ru/c18/2106/06/33267746608a.png)
