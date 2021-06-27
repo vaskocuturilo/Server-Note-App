@@ -25,10 +25,10 @@ You will need the following technologies available to try it out:
 * IDE of your choice
 * Web browser Chrome
 
-| GET    | POST    |
-| -------| --------|
-| /      | create  | 
-| /fetch | remove  |
+| ENDPOINT | TYPE    | EXAMPLE                | REQUEST              |
+| -------- | ------- |------------------------|----------------------
+| /        | GET     |http://localhost:5000/  |"Server is work fine."|
+
 
 ### Diagram how to work.
 
