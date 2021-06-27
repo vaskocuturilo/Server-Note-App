@@ -1,4 +1,4 @@
-# Simple JavaScript server with REST API for Note application.
+# Simple JavaScript server with REST API for Post application.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg)
 
@@ -12,9 +12,9 @@
 - Create automation scripts for testing REST API  
 - provide code and clear instructions how to run it.
 
-**Note**: please put your code in public repository.
+**Post**: please put your code in public repository.
 
-**Note**: Please send link to this repo when you are done.
+**Post**: Please send link to this repo when you are done.
 
 You will need the following technologies available to try it out:
 * Git

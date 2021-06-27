@@ -1,45 +1,43 @@
-import express  from 'express';
-import mongoose from 'mongoose';
-import data from './noteSchema.js'
+import express from 'express';
+import mongoose from 'mongoose'
+import Post from "./Post.js";
 
 const PORT = 5000;
+const DB_URL = 'This is you mongoDB account for database'
 
-var app = express()
+const app = express()
+app.use(express.json())
+
 
 app.get('/', (req, res) => {
-    res.status(200).json('Server works fine.')
+    res.status(200).json("Server is work fine.")
 })
 
-app.listen(PORT, () => console.log("SERVER STARTED ON PORT " + PORT))
-
-mongoose.connect('mongodb://localhost/newDB', {useNewUrlParser: true})
-
-mongoose.connection.once("open", () => {
-
-    console.log("Connected to DataBase")
-}).on("error", (error) => {
-    console.log("Failed to connect " + error)
+app.get('/fetch', async (req, res) =>{
+    const post = await Post.find({})
+    res.status(200).json(post)
 })
 
-app.post("/create", (req, res) => {
-
-    var note = data({
-        note: req.get("note"),
-        title: req.get("title"),
-        data: req.get("date")
-    })
-
-    note.save().then(() => {
-
-        if (note.isNew == false) {
-            console.log("Saveed data")
-            res.send("Saved data.")
-        } else {
-            console.log("Fail to save data.")
-        }
-    })
+app.post("/create", async (req, res) => {
+    const {title, date, note} = req.body
+    const post = await Post.create({title, date, note})
+    res.status(200).json(post)
 })
 
-var server = app.listen("8081", "192.168.1.5", () => {
-    console.log("Server is running.")
+app.post("/create", async (req, res) => {
+    const {title, date, note} = req.body
+    const post = await Post.create({title, date, note})
+    res.status(200).json(post)
 })
+
+async function startApplication() {
+    try {
+        await mongoose.connect(DB_URL, {useNewUrlParser: true}, {useUnifiedTopology: true})
+        app.listen(PORT, () => console.log("SERVER STARTED ON PORT " + PORT))
+
+    } catch (e) {
+        console.log(e)
+    }
+}
+
+startApplication()
