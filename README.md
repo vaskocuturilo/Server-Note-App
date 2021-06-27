@@ -25,10 +25,17 @@ You will need the following technologies available to try it out:
 * IDE of your choice
 * Web browser Chrome
 
-| ENDPOINT | TYPE    | EXAMPLE                | REQUEST              |
-| -------- | ------- |------------------------|----------------------
-| /        | GET     |http://localhost:5000/  |"Server is work fine."|
+| ENDPOINT | TYPE    | EXAMPLE                        | REQUEST                  |
+| -------- | ------- |-------------------------------|----------------------------
+| /        | GET     |http://localhost:5000/         |"Server is work fine."     |
+| /fetch   | GET     |http://localhost:5000/fetch   |Return all items in database|
+| /create  | POST    |http://localhost:5000/create  |Create item in database     |
+| /remove  | POST    |http://localhost:5000/remove  |Remove item in database     |
 
+
+### Ho w to run
+
+``` npm run dev ```
 
 ### Diagram how to work.
 
