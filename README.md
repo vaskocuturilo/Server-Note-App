@@ -7,7 +7,7 @@
 ## Requirements:
 - Use JavaScript language.
 - Use Node.js
-- Use mongo db
+- Use mongo db.
 - Create REST API server.
 - Create automation scripts for testing REST API  
 - provide code and clear instructions how to run it.
@@ -15,6 +15,8 @@
 **Post**: please put your code in public repository.
 
 **Post**: Please send link to this repo when you are done.
+
+**Post**: Please use this iOS Note Apllication https://github.com/vaskocuturilo/SimpleNoteApp.
 
 You will need the following technologies available to try it out:
 * Git
