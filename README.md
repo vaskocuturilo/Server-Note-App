@@ -1,4 +1,4 @@
-# Simple JavaScript server with REST API for Post application.
+# Simple JavaScript server with REST API for iOS Note application.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg)
 
