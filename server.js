@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 import router from "./router.js";
 
 const PORT = 5000;
-const DB_URL = 'This is you mongoDB account for database'
+const DB_URL = 'mongodb+srv://user:user@cluster0.vld4k.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 
 const app = express()
 app.use(express.json())
