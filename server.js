@@ -7,7 +7,7 @@ const swaggerDocument = require('./swagger.json');
 
 
 const PORT = 5000;
-const DB_URL = 'mongodb+srv://user:user@cluster0.vld4k.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const DB_URL = ''
 const app = express()
 
 app.use(express.json())
