@@ -4,6 +4,8 @@
 
 ![](https://upload.wikimedia.org/wikipedia/commons/3/32/Mongo-db-logo.png)
 
+![](https://everythingesp.com/wp-content/uploads/2018/07/swagger.jpg)
+
 ## Requirements:
 - Use JavaScript language.
 - Use Node.js
@@ -27,17 +29,15 @@ You will need the following technologies available to try it out:
 * IDE of your choice
 * Web browser Chrome
 
-| ENDPOINT  | TYPE    | EXAMPLE                        | REQUEST                  |
-| ---------| ------- |-------------------------------|----------------------------
-| /        | GET     |http://localhost:5000/api/        |"Server is work fine."     |
-| /fetch   | GET     |http://localhost:5000/api/fetch   |Return all items in database|
-| /create  | POST    |http://localhost:5000/api/create  |Create item in database     |
-| /remove  | POST    |http://localhost:5000/api/remove  |Remove item in database     |
-| /update  | POST    |http://localhost:5000/api/update  |Update items in database     |
-
 ### Ho w to run
 
 ``` npm run dev ```
+
+### Documentations in swagger.
+
+http://localhost:5000/
+
+![](https://a.radikal.ru/a19/2107/53/a15008e25058.png)
 
 ### Diagram how to work.
 

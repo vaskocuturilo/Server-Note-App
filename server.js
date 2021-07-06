@@ -1,18 +1,23 @@
-import express from 'express';
-import mongoose from 'mongoose'
-import router from "./router.js";
+const express = require('express')
+const mongoose = require('mongoose')
+const router = require('./router.js')
+
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
+
 
 const PORT = 5000;
-const DB_URL = 'This you need add your mongodb credential to database.'
-
+const DB_URL = 'mongodb+srv://user:user@cluster0.vld4k.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const app = express()
+
 app.use(express.json())
 app.use('/api', router)
+app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 async function startApplication() {
     try {
         await mongoose.connect(DB_URL, {useNewUrlParser: true}, {useUnifiedTopology: true}, {useFindAndModify: false})
-        app.listen(PORT, () => console.log("SERVER STARTED ON PORT " + PORT))
+        await app.listen(PORT, () => console.log("SERVER STARTED ON PORT " + PORT))
 
     } catch (e) {
         console.log(e)

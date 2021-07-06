@@ -1,0 +1,248 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "Simple Node jS server with REST API for iOS Note application.",
+    "version": "1.0.0",
+    "title": "Service REST API.",
+    "contact": {
+      "email": ""
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "tags": [
+    {
+      "name": "Action",
+      "description": "All actions for service"
+    }
+  ],
+  "paths": {
+    "/fetch": {
+      "get": {
+        "tags": [
+          "Action"
+        ],
+        "summary": "The get information about all notes.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": ""
+            }
+          },
+          "400": {
+            "description": "BAD_REQUEST",
+            "schema": {
+              "$ref": ""
+            }
+          }
+        }
+      }
+    },
+    "/create": {
+      "post": {
+        "tags": [
+          "Action"
+        ],
+        "summary": "The create a new note.",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "title",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "date",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "note",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The create a new note.",
+          "required": "true",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": ""
+              },
+              "example": {
+                "title": "example1",
+                "date": "example1",
+                "note": "example1"
+              }
+            }
+          }
+        },
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": ""
+            }
+          },
+          "400": {
+            "description": "BAD_REQUEST",
+            "schema": {
+              "$ref": ""
+            }
+          },
+          "404": {
+            "description": "NOT_FOUND",
+            "schema": {
+              "$ref": ""
+            }
+          }
+        }
+      }
+    },
+    "/update": {
+      "post": {
+        "tags": [
+          "Action"
+        ],
+        "summary": "The update old note.",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "title",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "date",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "note",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The update old note.",
+          "required": "true",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": ""
+              },
+              "example": {
+                "title": "example1",
+                "date": "example1",
+                "note": "example1"
+              }
+            }
+          }
+        },
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": ""
+            }
+          },
+          "400": {
+            "description": "BAD_REQUEST",
+            "schema": {
+              "$ref": ""
+            }
+          },
+          "404": {
+            "description": "NOT_FOUND",
+            "schema": {
+              "$ref": ""
+            }
+          }
+        }
+      }
+    },
+    "/remove": {
+      "post": {
+        "tags": [
+          "Action"
+        ],
+        "summary": "The delete note.",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The delete note.",
+          "required": "true",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": ""
+              },
+              "example": {
+                "id": "60de1085561b343c254a74f0"
+              }
+            }
+          }
+        },
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": ""
+            }
+          },
+          "400": {
+            "description": "BAD_REQUEST",
+            "schema": {
+              "$ref": ""
+            }
+          },
+          "404": {
+            "description": "NOT_FOUND",
+            "schema": {
+              "$ref": ""
+            }
+          }
+        }
+      }
+    }
+  }
+}
