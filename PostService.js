@@ -1,4 +1,4 @@
-import Post from "./Post.js";
+const Post = require('./Post.js')
 
 class PostService {
 
@@ -33,4 +33,4 @@ class PostService {
     }
 }
 
-export default new PostService();
+module.exports = new PostService();
